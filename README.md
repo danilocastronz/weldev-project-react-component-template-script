@@ -4,7 +4,7 @@
 
 This app has the purpose of providing you with a Node.js script that creates a React component, its Storybook stories, and UI unit tests. Each file contains a start point that I believe you will find useful.
 
-Hope you enjoy it, developers!
+Hope you enjoy it (and save you some time), developers!
 
 ## Features
 
