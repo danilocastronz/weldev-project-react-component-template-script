@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# React Component Template Script by Welcome, Developer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+This app has the purpose of providing you with a Node.js script that creates a React component, its Storybook stories, and UI unit tests. Each file contains a start point that I believe you will find useful.
 
-In the project directory, you can run:
+Hope you enjoy it, developers!
 
-### `yarn start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The following frameworks/libraries have been implemented:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. [React](https://reactjs.org/)
+2. [TypeScript](https://www.typescriptlang.org/)
+3. [Storybook](https://material-ui.com/)
+4. [React Testing Library](https://testing-library.com/react/)
+5. [Node.js](https://nodejs.org/)
 
-### `yarn test`
+## Install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get up and running with the template, you just have to run the commands below:
 
-### `yarn build`
+```terminal
+git clone https://github.com/danilocastronz/weldev-project-react-component-template-script
+cd weldev-project-react-component-template-script
+yarn install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Creating React Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To create a new React component using the template script, you just have to run the following command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```terminal
+yarn new-component <component-name>
+```
 
-### `yarn eject`
+There you go, that's it! A new folder with the React component, Storybook stories, and UI unit tests, has been created in the `src/components` folder 👌
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contributions
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions are more than welcome to our repository, developers. The goal is to make it a space where we contribute together to make it better! Feel free to create your own _pull request_ with the contribution, or if you prefer, reach out to me with your idea 🙋‍♂️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Versions
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- 1.00 - Node.js script that generates a React component, Storybook stories, and UI unit tests for the component.
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Dan Castro
