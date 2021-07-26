@@ -36,6 +36,11 @@ yarn new-component <component-name>
 
 There you go, that's it! A new folder with the React component, Storybook stories, and UI unit tests, has been created in the `src/components` folder 👌
 
+
+## Customizations
+
+Feel free to open `scripts/components/templates/component.template.js` and adjust the content of the files according to your preferences. My only goal here is to save you some time, and to give you a good start point.
+
 ## Contributions
 
 Contributions are more than welcome to our repository, developers. The goal is to make it a space where we contribute together to make it better! Feel free to create your own _pull request_ with the contribution, or if you prefer, reach out to me with your idea 🙋‍♂️
