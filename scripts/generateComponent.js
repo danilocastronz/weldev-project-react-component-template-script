@@ -1,27 +1,41 @@
 const fs = require('fs');
 const { component, story, test } = require('./templates/component.template.js');
 
-// grab component name from terminal argument
-const [name] = process.argv.slice(2);
-if (!name) throw new Error('You must include a component name.');
-
-const dir = `./src/components/${name}/`;
-
-// throw an error if the file already exists
-if (fs.existsSync(dir)) throw new Error('A component with that name already exists.');
-
-// create the folder
-fs.mkdirSync(dir, { recursive: true });
-
 function writeFileErrorHandler(err) {
     if (err) throw err;
 }
 
-let componentName = name.indexOf('/') > -1 ? name.split('/').pop() : name;
+// convert string to pascal case
+function formatComponentName(s) {
+    let upperPathItems = s.split('/').map(item => item.replace(/\w\S*/g,
+        (t) => t.charAt(0).toUpperCase() + t.substr(1).toLowerCase()
+    ));
+    return upperPathItems.join('/');
+}
 
-// component.tsx
+// grab component name from terminal argument
+const [name] = process.argv.slice(2);
+if (!name) throw new Error('You must include a component name.');
+
+// format component name to pascal case and no spaces
+const componentPath = formatComponentName(name).replace(/\s/g, '');
+const componentName = componentPath.indexOf('/') > -1 ? componentPath.split('/').pop() : componentPath;
+
+const dir = `./src/components/${componentPath}/`;
+
+// throw an error if the file already exists
+if (fs.existsSync(dir)) throw new Error('A component with that name already exists.');
+
+// create folder recursively
+fs.mkdirSync(dir, { recursive: true });
+
+// _create react component
 fs.writeFile(`${dir}/index.tsx`, component(componentName), writeFileErrorHandler);
-// storybook.jsx
+
+// _create storybook stories
 fs.writeFile(`${dir}/${componentName}.stories.tsx`, story(componentName), writeFileErrorHandler);
-// test.tsx
+
+// _create ui unit tests
 fs.writeFile(`${dir}/${componentName}.test.tsx`, test(componentName), writeFileErrorHandler);
+
+console.log(`SUCCESS: Component ${componentName} created successfully at ${dir}`);
