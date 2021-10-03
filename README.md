@@ -1,4 +1,4 @@
-![](./nodejs.png)
+<img width="100%" src="./nodejs.svg" />
 
 # React Component Template Script by Welcome, Developer
 
